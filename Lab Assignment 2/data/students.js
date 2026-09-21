@@ -1,20 +1,12 @@
 const students = [
   {
-    studentId: "STU001",
-    name: "Aarav Sharma",
-    age: 20,
-    gender: "Male",
-    course: "CSE",
-    semester: 4,
-    city: "Delhi",
-    email: "aarav@example.com",
+    studentId: "STU001", name: "Aarav Sharma", age: 20, gender: "Male", course: "CSE", semester: 4, city: "Delhi", email: "aarav@example.com",
     marks: {
       math: 88,
       dbms: 76,
       web: 92
     },
-    attendance: 91,
-    feesPaid: true,
+    attendance: 91, feesPaid: true,
     skills: [
       "JavaScript",
       "MongoDB",
@@ -24,21 +16,13 @@ const students = [
   },
 
   {
-    studentId: "STU002",
-    name: "Priya Verma",
-    age: 19,
-    gender: "Female",
-    course: "CSE",
-    semester: 2,
-    city: "Gurgaon",
-    email: "priya@example.com",
+    studentId: "STU002", name: "Priya Verma", age: 19, gender: "Female", course: "CSE", semester: 2, city: "Gurgaon", email: "priya@example.com",
     marks: {
       math: 95,
       dbms: 89,
       web: 94
     },
-    attendance: 96,
-    feesPaid: true,
+    attendance: 96, feesPaid: true,
     skills: [
       "HTML",
       "CSS",
@@ -48,21 +32,13 @@ const students = [
   },
 
   {
-    studentId: "STU003",
-    name: "Rahul Singh",
-    age: 21,
-    gender: "Male",
-    course: "BCA",
-    semester: 4,
-    city: "Noida",
-    email: "rahul@example.com",
+    studentId: "STU003", name: "Rahul Singh", age: 21, gender: "Male", course: "BCA", semester: 4, city: "Noida", email: "rahul@example.com",
     marks: {
       math: 72,
       dbms: 68,
       web: 81
     },
-    attendance: 78,
-    feesPaid: false,
+    attendance: 78, feesPaid: false,
     skills: [
       "Python",
       "SQL"
@@ -71,21 +47,13 @@ const students = [
   },
 
   {
-    studentId: "STU004",
-    name: "Sneha Gupta",
-    age: 20,
-    gender: "Female",
-    course: "BCA",
-    semester: 6,
-    city: "Delhi",
-    email: "sneha@example.com",
+    studentId: "STU004", name: "Sneha Gupta", age: 20, gender: "Female", course: "BCA", semester: 6, city: "Delhi", email: "sneha@example.com",
     marks: {
       math: 84,
       dbms: 91,
       web: 87
     },
-    attendance: 88,
-    feesPaid: true,
+    attendance: 88, feesPaid: true,
     skills: [
       "Java",
       "SQL",
