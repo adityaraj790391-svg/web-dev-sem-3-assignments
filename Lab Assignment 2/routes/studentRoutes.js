@@ -1,10 +1,7 @@
 const express = require("express");
-
 const router = express.Router();
-
 const students = require("../data/students");
 
-// GET all students
 router.get("/", (req, res) => {
   res.status(200).json({
     message: "All students",
@@ -12,7 +9,6 @@ router.get("/", (req, res) => {
   });
 });
 
-// GET student by ID
 router.get("/:id", (req, res) => {
   const student = students.find(
     (student) => student.studentId === req.params.id
@@ -27,22 +23,9 @@ router.get("/:id", (req, res) => {
   res.status(200).json(student);
 });
 
-// POST - add new student
 router.post("/", (req, res) => {
   const {
-    studentId,
-    name,
-    age,
-    gender,
-    course,
-    semester,
-    city,
-    email,
-    marks,
-    attendance,
-    feesPaid,
-    skills,
-    isActive
+    studentId, name, age,gender, course, semester, city, email, marks, attendance, feesPaid, skills, isActive
   } = req.body;
 
   if (!studentId || !name || !age || !course) {
@@ -62,30 +45,16 @@ router.post("/", (req, res) => {
   }
 
   const newStudent = {
-    studentId,
-    name,
-    age,
-    gender,
-    course,
-    semester,
-    city,
-    email,
-    marks,
-    attendance,
-    feesPaid,
-    skills,
-    isActive
+    studentId, name, age, gender, course, semester, city, email, marks, attendance, feesPaid, skills, isActive
   };
 
   students.push(newStudent);
-
   res.status(201).json({
     message: "Student created successfully",
     student: newStudent
   });
 });
 
-// PUT - update student
 router.put("/:id", (req, res) => {
   const student = students.find(
     (student) => student.studentId === req.params.id
@@ -97,19 +66,7 @@ router.put("/:id", (req, res) => {
     });
   }
 
-  const {
-    name,
-    age,
-    gender,
-    course,
-    semester,
-    city,
-    email,
-    marks,
-    attendance,
-    feesPaid,
-    skills,
-    isActive
+  const {name,age, gender, course, semester, city, email, marks, attendance, feesPaid, skills, isActive
   } = req.body;
 
   if (name !== undefined) student.name = name;
@@ -131,7 +88,6 @@ router.put("/:id", (req, res) => {
   });
 });
 
-// DELETE - delete student
 router.delete("/:id", (req, res) => {
   const studentIndex = students.findIndex(
     (student) => student.studentId === req.params.id
